@@ -57,15 +57,30 @@ program::program(const program &src)
   std::copy(src.nodes, src.nodes + src.len, nodes);
 }
 program &program::operator=(const program &src) {
+  if (this == &src) {
+    return *this;
+  }
+
+  // Reuse the allocated node array when both programs have the same length.
+  // This avoids repeated delete[]/new[] in the evolution loop.
+  if (len == src.len && nodes != nullptr) {
+    if (src.len > 0) {
+      std::copy(src.nodes, src.nodes + src.len, nodes);
+    }
+  } else {
+    node *replacement = src.len > 0 ? new node[src.len] : nullptr;
+    if (src.len > 0) {
+      std::copy(src.nodes, src.nodes + src.len, replacement);
+    }
+    delete[] nodes;
+    nodes = replacement;
+  }
+
   len = src.len;
   depth = src.depth;
   raw_fitness_ = src.raw_fitness_;
   metric = src.metric;
   mut_type = src.mut_type;
-  // Copy nodes
-  delete[] nodes;
-  nodes = new node[len];
-  std::copy(src.nodes, src.nodes + src.len, nodes);
   return *this;
 }
 void compute_metric(int n_rows, int n_progs, const float *y,
