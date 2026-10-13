@@ -21,7 +21,7 @@ void weightedPearson(const uint64_t n_samples, const uint64_t n_progs,
   std::vector<math_t> y_tmp(n_samples);
   std::vector<math_t> x_tmp(n_samples * n_progs);
 
-  math_t y_mu;                       // output mean
+  math_t y_mu = static_cast<math_t>(0);            // output mean
   std::vector<math_t> x_mu(n_progs); // predicted output mean
 
   std::vector<math_t> y_diff(n_samples);           // normalized output
