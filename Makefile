@@ -1,5 +1,6 @@
+
 CXX := g++
-CXXFLAGS := -std=c++17 -Wall -Wextra -I include -I. 
+CXXFLAGS := -std=c++17 -O3 -fopenmp -Wall -Wextra -I include -I.
 
 # Directories
 SRC_DIR := src
@@ -9,7 +10,6 @@ BENCH_DIR := benchmark
 
 # Find all cpp files in src directory
 SRCS := $(wildcard $(SRC_DIR)/*.cpp)
-# Generate object file names
 OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
 # Benchmark program
@@ -17,7 +17,7 @@ BENCH_SRC := $(BENCH_DIR)/genetic_benchmark.cpp
 BENCH_BIN := genetic_benchmark
 
 # Default target
-all: directories $(BENCH_BIN) 
+all: directories $(BENCH_BIN)
 
 # Create necessary directories
 directories:
@@ -29,10 +29,10 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@echo "Compiling $<..."
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# build benchmark lib 
+# Build benchmark program
 $(BENCH_BIN): $(BENCH_SRC) $(OBJS)
 	@echo "Building benchmark program..."
-	@$(CXX) $(CXXFLAGS) $< $(OBJS) -o $@ 
+	@$(CXX) $(CXXFLAGS) $< $(OBJS) -o $@
 
 # Clean build files
 clean:
@@ -42,4 +42,4 @@ clean:
 # Clean and rebuild
 rebuild: clean all
 
-.PHONY: all clean rebuild directories 
+.PHONY: all clean rebuild directories
