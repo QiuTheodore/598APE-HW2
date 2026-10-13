@@ -1,0 +1,504 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 96.24      4.35     4.35       18     0.24     0.24  void genetic::execute_kernel<20>(genetic::program*, float const*, float*, unsigned long, unsigned long)
+  1.77      4.43     0.08                             _init
+  0.44      4.45     0.02 10123241     0.00     0.00  genetic::node::operator=(genetic::node const&)
+  0.44      4.47     0.02   111000     0.00     0.00  philox_random_uint32
+  0.44      4.49     0.02    13359     0.00     0.00  genetic::get_subtree(genetic::node*, int, PhiloxEngine&)
+  0.22      4.50     0.01 10110004     0.00     0.00  genetic::node::node()
+  0.22      4.51     0.01     6754     0.00     0.00  genetic::get_depth(genetic::program const&)
+  0.22      4.52     0.01     6514     0.00     0.00  genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&)
+  0.00      4.52     0.00  1764214     0.00     0.00  genetic::node::is_nonterminal() const
+  0.00      4.52     0.00   590627     0.00     0.00  genetic::node::node(genetic::node const&)
+  0.00      4.52     0.00   584728     0.00     0.00  genetic::execute(genetic::program* const&, int, int, float const*, float*)
+  0.00      4.52     0.00   458238     0.00     0.00  genetic::node::arity() const
+  0.00      4.52     0.00    75490     0.00     0.00  genetic::program::operator=(genetic::program const&)
+  0.00      4.52     0.00    10239     0.00     0.00  genetic::program::~program()
+  0.00      4.52     0.00     8703     0.00     0.00  genetic::program::program(genetic::program const&)
+  0.00      4.52     0.00     8655     0.00     0.00  genetic::node::node(genetic::node::type)
+  0.00      4.52     0.00     7647     0.00     0.00  std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long)
+  0.00      4.52     0.00     4725     0.00     0.00  genetic::node::node(int)
+  0.00      4.52     0.00     2226     0.00     0.00  void std::vector<float, std::allocator<float> >::_M_realloc_append<float>(float&&)
+  0.00      4.52     0.00     1536     0.00     0.00  genetic::program::program()
+  0.00      4.52     0.00      893     0.00     0.00  genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&)
+  0.00      4.52     0.00      568     0.00     0.00  genetic::node::is_terminal() const
+  0.00      4.52     0.00      472     0.00     0.00  genetic::node::node(float)
+  0.00      4.52     0.00      381     0.00     0.00  genetic::subtree_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&)
+  0.00      4.52     0.00      293     0.00     0.01  genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&)
+  0.00      4.52     0.00       91     0.00     0.00  genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&)
+  0.00      4.52     0.00       63     0.00     0.00  genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&)
+  0.00      4.52     0.00       32     0.00     0.00  philox_seed
+  0.00      4.52     0.00       28     0.00     0.00  void std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >::_M_realloc_append<std::vector<float, std::allocator<float> > const&>(std::vector<float, std::allocator<float> > const&)
+  0.00      4.52     0.00       28     0.00     0.00  void std::vector<float, std::allocator<float> >::_M_realloc_append<float const&>(float const&)
+  0.00      4.52     0.00       19     0.00     0.00  stbi__create_png_alpha_expand8(unsigned char*, unsigned char*, unsigned int, int)
+  0.00      4.52     0.00       16     0.00     0.25  genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int)
+  0.00      4.52     0.00       16     0.00     0.00  genetic::compute_metric(int, int, float const*, float const*, float const*, float*, genetic::param const&)
+  0.00      4.52     0.00       16     0.00     0.00  void genetic::meanSquareError<float>(unsigned long, unsigned long, float const*, float const*, float const*, float*)
+  0.00      4.52     0.00       16     0.00     0.24  genetic::set_batched_fitness(int, std::vector<genetic::program, std::allocator<genetic::program> >&, genetic::param const&, int, float const*, float const*, float const*)
+  0.00      4.52     0.00       15     0.00     0.00  genetic::tournament_kernel(std::vector<genetic::program, std::allocator<genetic::program> > const&, int*, int, int, int, int, int, float)
+  0.00      4.52     0.00        5     0.00     0.00  void std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >::_M_realloc_append<std::vector<genetic::program, std::allocator<genetic::program> > const&>(std::vector<genetic::program, std::allocator<genetic::program> > const&)
+  0.00      4.52     0.00        2     0.00     0.00  utils::flatten_column_major(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&)
+  0.00      4.52     0.00        2     0.00     0.00  genetic::symRegPredict(float const*, int, genetic::program* const&, float*)
+  0.00      4.52     0.00        2     0.00     1.96  genetic::stringify[abi:cxx11](genetic::program const&)
+  0.00      4.52     0.00        1     0.00     0.02  insertionSortPrograms(genetic::program*, int)
+  0.00      4.52     0.00        1     0.00     4.44  run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      4.52     0.00        1     0.00     0.00  stbi__malloc_mad3(int, int, int, int)
+  0.00      4.52     0.00        1     0.00     0.00  utils::load_dataset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      4.52     0.00        1     0.00     0.00  std::pair<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >, std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > > utils::train_test_split<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > >(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&, float)
+  0.00      4.52     0.00        1     0.00     0.00  std::pair<std::vector<float, std::allocator<float> >, std::vector<float, std::allocator<float> > > utils::train_test_split<std::vector<float, std::allocator<float> > >(std::vector<float, std::allocator<float> > const&, float)
+  0.00      4.52     0.00        1     0.00     0.00  genetic::param::param()
+  0.00      4.52     0.00        1     0.00     0.00  void std::_Rb_tree<int, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > >, std::_Select1st<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > >, std::less<int>, std::allocator<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > > >::_M_assign_unique<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*>(std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*)
+  0.00      4.52     0.00        1     0.00     0.00  bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2026 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.22% of 4.52 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     98.2    0.00    4.44                 main [1]
+                0.00    4.44       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+                0.00    0.00       6/19          stbi__create_png_alpha_expand8(unsigned char*, unsigned char*, unsigned int, int) [100]
+                0.00    0.00       1/1           bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [110]
+-----------------------------------------------
+                0.00    4.44       1/1           main [1]
+[2]     98.2    0.00    4.44       1         run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+                0.00    3.92       2/2           genetic::stringify[abi:cxx11](genetic::program const&) [6]
+                0.48    0.00       2/18          void genetic::execute_kernel<20>(genetic::program*, float const*, float*, unsigned long, unsigned long) [3]
+                0.00    0.02       1/1           insertionSortPrograms(genetic::program*, int) [12]
+                0.00    0.01       1/293         genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    0.00       1/1           utils::load_dataset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [21]
+                0.00    0.00    8704/10239       genetic::program::~program() [91]
+                0.00    0.00     512/1536        genetic::program::program() [95]
+                0.00    0.00      13/19          stbi__create_png_alpha_expand8(unsigned char*, unsigned char*, unsigned int, int) [100]
+                0.00    0.00       2/2           utils::flatten_column_major(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&) [103]
+                0.00    0.00       2/584728      genetic::execute(genetic::program* const&, int, int, float const*, float*) [89]
+                0.00    0.00       2/2           genetic::symRegPredict(float const*, int, genetic::program* const&, float*) [104]
+                0.00    0.00       1/1           std::pair<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >, std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > > utils::train_test_split<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > >(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&, float) [106]
+                0.00    0.00       1/1           std::pair<std::vector<float, std::allocator<float> >, std::vector<float, std::allocator<float> > > utils::train_test_split<std::vector<float, std::allocator<float> > >(std::vector<float, std::allocator<float> > const&, float) [107]
+                0.00    0.00       1/1           genetic::param::param() [108]
+                0.00    0.00       1/1           void std::_Rb_tree<int, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > >, std::_Select1st<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > >, std::less<int>, std::allocator<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > > >::_M_assign_unique<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*>(std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*) [109]
+                0.00    0.00       1/1           stbi__malloc_mad3(int, int, int, int) [105]
+-----------------------------------------------
+                0.48    0.00       2/18          run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+                3.87    0.00      16/18          genetic::set_batched_fitness(int, std::vector<genetic::program, std::allocator<genetic::program> >&, genetic::param const&, int, float const*, float const*, float const*) [7]
+[3]     96.2    4.35    0.00      18         void genetic::execute_kernel<20>(genetic::program*, float const*, float*, unsigned long, unsigned long) [3]
+-----------------------------------------------
+                0.00    0.01       1/293         run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+                0.00    3.92     292/293         genetic::stringify[abi:cxx11](genetic::program const&) [6]
+[4]     87.0    0.00    3.93     293         genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    3.93      16/16          genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+                0.00    0.00    5632/8703        genetic::program::program(genetic::program const&) [22]
+                0.00    0.00       5/5           void std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >::_M_realloc_append<std::vector<genetic::program, std::allocator<genetic::program> > const&>(std::vector<genetic::program, std::allocator<genetic::program> > const&) [24]
+                0.00    0.00     512/75490       genetic::program::operator=(genetic::program const&) [10]
+                0.00    0.00      16/2226        void std::vector<float, std::allocator<float> >::_M_realloc_append<float>(float&&) [20]
+                0.00    0.00      35/111000      philox_random_uint32 [13]
+                0.00    0.00    1024/1536        genetic::program::program() [95]
+                0.00    0.00    1024/10239       genetic::program::~program() [91]
+                0.00    0.00       1/32          philox_seed [26]
+-----------------------------------------------
+                0.00    3.93      16/16          genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+[5]     86.9    0.00    3.93      16         genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+                0.00    3.87      16/16          genetic::set_batched_fitness(int, std::vector<genetic::program, std::allocator<genetic::program> >&, genetic::param const&, int, float const*, float const*, float const*) [7]
+                0.01    0.03    6133/6514        genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [9]
+                0.00    0.01      15/15          genetic::tournament_kernel(std::vector<genetic::program, std::allocator<genetic::program> > const&, int*, int, int, int, int, int, float) [17]
+                0.00    0.00     381/381         genetic::subtree_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [19]
+                0.00    0.00     512/893         genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.00    0.00    7680/111000      philox_random_uint32 [13]
+                0.00    0.00      63/63          genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00      91/91          genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [25]
+                0.00    0.00    1012/75490       genetic::program::operator=(genetic::program const&) [10]
+                0.00    0.00      16/32          philox_seed [26]
+-----------------------------------------------
+                0.00    3.92       2/2           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[6]     86.7    0.00    3.92       2         genetic::stringify[abi:cxx11](genetic::program const&) [6]
+                0.00    3.92     292/293         genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    0.00     290/568         genetic::node::is_terminal() const [96]
+                0.00    0.00     191/458238      genetic::node::arity() const [90]
+-----------------------------------------------
+                0.00    3.87      16/16          genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[7]     85.5    0.00    3.87      16         genetic::set_batched_fitness(int, std::vector<genetic::program, std::allocator<genetic::program> >&, genetic::param const&, int, float const*, float const*, float const*) [7]
+                3.87    0.00      16/18          void genetic::execute_kernel<20>(genetic::program*, float const*, float*, unsigned long, unsigned long) [3]
+                0.00    0.00      16/16          void genetic::meanSquareError<float>(unsigned long, unsigned long, float const*, float const*, float const*, float*) [102]
+                0.00    0.00      16/16          genetic::compute_metric(int, int, float const*, float const*, float const*, float*, genetic::param const&) [101]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      1.8    0.08    0.00                 _init [8]
+-----------------------------------------------
+                0.00    0.00     381/6514        genetic::subtree_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [19]
+                0.01    0.03    6133/6514        genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[9]      1.0    0.01    0.03    6514         genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [9]
+                0.02    0.00   13177/13359       genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+                0.01    0.00    6663/6754        genetic::get_depth(genetic::program const&) [16]
+                0.00    0.00  563887/10123241     genetic::node::operator=(genetic::node const&) [14]
+                0.00    0.00  563887/10110004     genetic::node::node() [15]
+-----------------------------------------------
+                0.00    0.00      63/75490       genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00     512/75490       genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    0.00    1012/75490       genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+                0.00    0.00    8192/75490       void std::vector<float, std::allocator<float> >::_M_realloc_append<float>(float&&) [20]
+                0.00    0.02   65711/75490       insertionSortPrograms(genetic::program*, int) [12]
+[10]     0.6    0.00    0.03   75490         genetic::program::operator=(genetic::program const&) [10]
+                0.02    0.00 8705150/10123241     genetic::node::operator=(genetic::node const&) [14]
+                0.01    0.00 8705150/10110004     genetic::node::node() [15]
+-----------------------------------------------
+                0.00    0.00     182/13359       genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [25]
+                0.02    0.00   13177/13359       genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [9]
+[11]     0.5    0.02    0.00   13359         genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+                0.00    0.00   13359/111000      philox_random_uint32 [13]
+                0.00    0.00  114437/10123241     genetic::node::operator=(genetic::node const&) [14]
+                0.00    0.00  114437/10110004     genetic::node::node() [15]
+                0.00    0.00 1192858/1764214     genetic::node::is_nonterminal() const [87]
+                0.00    0.00   70141/458238      genetic::node::arity() const [90]
+-----------------------------------------------
+                0.00    0.02       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[12]     0.5    0.00    0.02       1         insertionSortPrograms(genetic::program*, int) [12]
+                0.00    0.02   65711/75490       genetic::program::operator=(genetic::program const&) [10]
+                0.00    0.00     511/8703        genetic::program::program(genetic::program const&) [22]
+                0.00    0.00     511/10239       genetic::program::~program() [91]
+-----------------------------------------------
+                0.00    0.00      35/111000      genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    0.00    6165/111000      genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00    7680/111000      genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+                0.00    0.00   13359/111000      genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+                0.01    0.00   28509/111000      genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.01    0.00   55252/111000      genetic::tournament_kernel(std::vector<genetic::program, std::allocator<genetic::program> > const&, int*, int, int, int, int, int, float) [17]
+[13]     0.4    0.02    0.00  111000         philox_random_uint32 [13]
+-----------------------------------------------
+                0.00    0.00     556/10123241     genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00    7283/10123241     genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [25]
+                0.00    0.00   26255/10123241     genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.00    0.00  114437/10123241     genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+                0.00    0.00  563887/10123241     genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [9]
+                0.00    0.00  705673/10123241     genetic::program::program(genetic::program const&) [22]
+                0.02    0.00 8705150/10123241     genetic::program::operator=(genetic::program const&) [10]
+[14]     0.4    0.02    0.00 10123241         genetic::node::operator=(genetic::node const&) [14]
+-----------------------------------------------
+                0.00    0.00    7283/10110004     genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [25]
+                0.00    0.00   13574/10110004     genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.00    0.00  114437/10110004     genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+                0.00    0.00  563887/10110004     genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [9]
+                0.00    0.00  705673/10110004     genetic::program::program(genetic::program const&) [22]
+                0.01    0.00 8705150/10110004     genetic::program::operator=(genetic::program const&) [10]
+[15]     0.2    0.01    0.00 10110004         genetic::node::node() [15]
+-----------------------------------------------
+                0.00    0.00      91/6754        genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [25]
+                0.01    0.00    6663/6754        genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [9]
+[16]     0.2    0.01    0.00    6754         genetic::get_depth(genetic::program const&) [16]
+                0.00    0.00  571170/590627      genetic::node::node(genetic::node const&) [88]
+                0.00    0.00  571170/1764214     genetic::node::is_nonterminal() const [87]
+                0.00    0.00  571152/584728      genetic::execute(genetic::program* const&, int, int, float const*, float*) [89]
+                0.00    0.00  379251/458238      genetic::node::arity() const [90]
+                0.00    0.00    6754/7647        std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [93]
+-----------------------------------------------
+                0.00    0.01      15/15          genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[17]     0.2    0.00    0.01      15         genetic::tournament_kernel(std::vector<genetic::program, std::allocator<genetic::program> > const&, int*, int, int, int, int, int, float) [17]
+                0.01    0.00   55252/111000      philox_random_uint32 [13]
+                0.00    0.00      15/32          philox_seed [26]
+-----------------------------------------------
+                0.00    0.00     381/893         genetic::subtree_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [19]
+                0.00    0.00     512/893         genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[18]     0.1    0.00    0.01     893         genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.01    0.00   28509/111000      philox_random_uint32 [13]
+                0.00    0.00   26255/10123241     genetic::node::operator=(genetic::node const&) [14]
+                0.00    0.00   13574/10110004     genetic::node::node() [15]
+                0.00    0.00   13574/590627      genetic::node::node(genetic::node const&) [88]
+                0.00    0.00   13574/584728      genetic::execute(genetic::program* const&, int, int, float const*, float*) [89]
+                0.00    0.00    8469/8655        genetic::node::node(genetic::node::type) [92]
+                0.00    0.00    8469/458238      genetic::node::arity() const [90]
+                0.00    0.00    4637/4725        genetic::node::node(int) [94]
+                0.00    0.00     893/7647        std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [93]
+                0.00    0.00     468/472         genetic::node::node(float) [97]
+-----------------------------------------------
+                0.00    0.00     381/381         genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[19]     0.1    0.00    0.00     381         genetic::subtree_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [19]
+                0.00    0.00     381/6514        genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [9]
+                0.00    0.00     381/893         genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+-----------------------------------------------
+                0.00    0.00      16/2226        genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    0.00    2210/2226        utils::load_dataset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [21]
+[20]     0.1    0.00    0.00    2226         void std::vector<float, std::allocator<float> >::_M_realloc_append<float>(float&&) [20]
+                0.00    0.00    8192/75490       genetic::program::operator=(genetic::program const&) [10]
+-----------------------------------------------
+                0.00    0.00       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[21]     0.1    0.00    0.00       1         utils::load_dataset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [21]
+                0.00    0.00    2210/2226        void std::vector<float, std::allocator<float> >::_M_realloc_append<float>(float&&) [20]
+                0.00    0.00      10/28          void std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >::_M_realloc_append<std::vector<float, std::allocator<float> > const&>(std::vector<float, std::allocator<float> > const&) [98]
+                0.00    0.00      10/28          void std::vector<float, std::allocator<float> >::_M_realloc_append<float const&>(float const&) [99]
+-----------------------------------------------
+                0.00    0.00     511/8703        insertionSortPrograms(genetic::program*, int) [12]
+                0.00    0.00    2560/8703        void std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >::_M_realloc_append<std::vector<genetic::program, std::allocator<genetic::program> > const&>(std::vector<genetic::program, std::allocator<genetic::program> > const&) [24]
+                0.00    0.00    5632/8703        genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+[22]     0.0    0.00    0.00    8703         genetic::program::program(genetic::program const&) [22]
+                0.00    0.00  705673/10123241     genetic::node::operator=(genetic::node const&) [14]
+                0.00    0.00  705673/10110004     genetic::node::node() [15]
+-----------------------------------------------
+                0.00    0.00      63/63          genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[23]     0.0    0.00    0.00      63         genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00    6165/111000      philox_random_uint32 [13]
+                0.00    0.00      63/75490       genetic::program::operator=(genetic::program const&) [10]
+                0.00    0.00     556/10123241     genetic::node::operator=(genetic::node const&) [14]
+                0.00    0.00    5883/590627      genetic::node::node(genetic::node const&) [88]
+                0.00    0.00     278/568         genetic::node::is_terminal() const [96]
+                0.00    0.00     186/1764214     genetic::node::is_nonterminal() const [87]
+                0.00    0.00     186/458238      genetic::node::arity() const [90]
+                0.00    0.00     186/8655        genetic::node::node(genetic::node::type) [92]
+                0.00    0.00      88/4725        genetic::node::node(int) [94]
+                0.00    0.00       4/472         genetic::node::node(float) [97]
+-----------------------------------------------
+                0.00    0.00       5/5           genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+[24]     0.0    0.00    0.00       5         void std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >::_M_realloc_append<std::vector<genetic::program, std::allocator<genetic::program> > const&>(std::vector<genetic::program, std::allocator<genetic::program> > const&) [24]
+                0.00    0.00    2560/8703        genetic::program::program(genetic::program const&) [22]
+-----------------------------------------------
+                0.00    0.00      91/91          genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[25]     0.0    0.00    0.00      91         genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [25]
+                0.00    0.00     182/13359       genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+                0.00    0.00      91/6754        genetic::get_depth(genetic::program const&) [16]
+                0.00    0.00    7283/10123241     genetic::node::operator=(genetic::node const&) [14]
+                0.00    0.00    7283/10110004     genetic::node::node() [15]
+-----------------------------------------------
+                0.00    0.00       1/32          genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    0.00      15/32          genetic::tournament_kernel(std::vector<genetic::program, std::allocator<genetic::program> > const&, int*, int, int, int, int, int, float) [17]
+                0.00    0.00      16/32          genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [5]
+[26]     0.0    0.00    0.00      32         philox_seed [26]
+-----------------------------------------------
+                0.00    0.00     186/1764214     genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00  571170/1764214     genetic::get_depth(genetic::program const&) [16]
+                0.00    0.00 1192858/1764214     genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+[87]     0.0    0.00    0.00 1764214         genetic::node::is_nonterminal() const [87]
+-----------------------------------------------
+                0.00    0.00    5883/590627      genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00   13574/590627      genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.00    0.00  571170/590627      genetic::get_depth(genetic::program const&) [16]
+[88]     0.0    0.00    0.00  590627         genetic::node::node(genetic::node const&) [88]
+-----------------------------------------------
+                0.00    0.00       2/584728      run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+                0.00    0.00   13574/584728      genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.00    0.00  571152/584728      genetic::get_depth(genetic::program const&) [16]
+[89]     0.0    0.00    0.00  584728         genetic::execute(genetic::program* const&, int, int, float const*, float*) [89]
+-----------------------------------------------
+                0.00    0.00     186/458238      genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00     191/458238      genetic::stringify[abi:cxx11](genetic::program const&) [6]
+                0.00    0.00    8469/458238      genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.00    0.00   70141/458238      genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [11]
+                0.00    0.00  379251/458238      genetic::get_depth(genetic::program const&) [16]
+[90]     0.0    0.00    0.00  458238         genetic::node::arity() const [90]
+-----------------------------------------------
+                0.00    0.00     511/10239       insertionSortPrograms(genetic::program*, int) [12]
+                0.00    0.00    1024/10239       genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+                0.00    0.00    8704/10239       run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[91]     0.0    0.00    0.00   10239         genetic::program::~program() [91]
+-----------------------------------------------
+                0.00    0.00     186/8655        genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00    8469/8655        genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+[92]     0.0    0.00    0.00    8655         genetic::node::node(genetic::node::type) [92]
+-----------------------------------------------
+                0.00    0.00     893/7647        genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+                0.00    0.00    6754/7647        genetic::get_depth(genetic::program const&) [16]
+[93]     0.0    0.00    0.00    7647         std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [93]
+-----------------------------------------------
+                0.00    0.00      88/4725        genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00    4637/4725        genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+[94]     0.0    0.00    0.00    4725         genetic::node::node(int) [94]
+-----------------------------------------------
+                0.00    0.00     512/1536        run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+                0.00    0.00    1024/1536        genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [4]
+[95]     0.0    0.00    0.00    1536         genetic::program::program() [95]
+-----------------------------------------------
+                0.00    0.00     278/568         genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00     290/568         genetic::stringify[abi:cxx11](genetic::program const&) [6]
+[96]     0.0    0.00    0.00     568         genetic::node::is_terminal() const [96]
+-----------------------------------------------
+                0.00    0.00       4/472         genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [23]
+                0.00    0.00     468/472         genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [18]
+[97]     0.0    0.00    0.00     472         genetic::node::node(float) [97]
+-----------------------------------------------
+                0.00    0.00      10/28          utils::load_dataset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [21]
+                0.00    0.00      18/28          std::pair<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >, std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > > utils::train_test_split<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > >(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&, float) [106]
+[98]     0.0    0.00    0.00      28         void std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >::_M_realloc_append<std::vector<float, std::allocator<float> > const&>(std::vector<float, std::allocator<float> > const&) [98]
+-----------------------------------------------
+                0.00    0.00      10/28          utils::load_dataset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [21]
+                0.00    0.00      18/28          std::pair<std::vector<float, std::allocator<float> >, std::vector<float, std::allocator<float> > > utils::train_test_split<std::vector<float, std::allocator<float> > >(std::vector<float, std::allocator<float> > const&, float) [107]
+[99]     0.0    0.00    0.00      28         void std::vector<float, std::allocator<float> >::_M_realloc_append<float const&>(float const&) [99]
+-----------------------------------------------
+                0.00    0.00       6/19          main [1]
+                0.00    0.00      13/19          run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[100]    0.0    0.00    0.00      19         stbi__create_png_alpha_expand8(unsigned char*, unsigned char*, unsigned int, int) [100]
+-----------------------------------------------
+                0.00    0.00      16/16          genetic::set_batched_fitness(int, std::vector<genetic::program, std::allocator<genetic::program> >&, genetic::param const&, int, float const*, float const*, float const*) [7]
+[101]    0.0    0.00    0.00      16         genetic::compute_metric(int, int, float const*, float const*, float const*, float*, genetic::param const&) [101]
+-----------------------------------------------
+                0.00    0.00      16/16          genetic::set_batched_fitness(int, std::vector<genetic::program, std::allocator<genetic::program> >&, genetic::param const&, int, float const*, float const*, float const*) [7]
+[102]    0.0    0.00    0.00      16         void genetic::meanSquareError<float>(unsigned long, unsigned long, float const*, float const*, float const*, float*) [102]
+-----------------------------------------------
+                0.00    0.00       2/2           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[103]    0.0    0.00    0.00       2         utils::flatten_column_major(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&) [103]
+-----------------------------------------------
+                0.00    0.00       2/2           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[104]    0.0    0.00    0.00       2         genetic::symRegPredict(float const*, int, genetic::program* const&, float*) [104]
+-----------------------------------------------
+                0.00    0.00       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[105]    0.0    0.00    0.00       1         stbi__malloc_mad3(int, int, int, int) [105]
+-----------------------------------------------
+                0.00    0.00       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[106]    0.0    0.00    0.00       1         std::pair<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >, std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > > utils::train_test_split<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > >(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&, float) [106]
+                0.00    0.00      18/28          void std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >::_M_realloc_append<std::vector<float, std::allocator<float> > const&>(std::vector<float, std::allocator<float> > const&) [98]
+-----------------------------------------------
+                0.00    0.00       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[107]    0.0    0.00    0.00       1         std::pair<std::vector<float, std::allocator<float> >, std::vector<float, std::allocator<float> > > utils::train_test_split<std::vector<float, std::allocator<float> > >(std::vector<float, std::allocator<float> > const&, float) [107]
+                0.00    0.00      18/28          void std::vector<float, std::allocator<float> >::_M_realloc_append<float const&>(float const&) [99]
+-----------------------------------------------
+                0.00    0.00       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[108]    0.0    0.00    0.00       1         genetic::param::param() [108]
+-----------------------------------------------
+                0.00    0.00       1/1           run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [2]
+[109]    0.0    0.00    0.00       1         void std::_Rb_tree<int, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > >, std::_Select1st<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > >, std::less<int>, std::allocator<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > > >::_M_assign_unique<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*>(std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*) [109]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[110]    0.0    0.00    0.00       1         bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [110]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2026 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [12] insertionSortPrograms(genetic::program*, int) [19] genetic::subtree_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [16] genetic::get_depth(genetic::program const&)
+   [2] run_symbolic_regression(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [17] genetic::tournament_kernel(std::vector<genetic::program, std::allocator<genetic::program> > const&, int*, int, int, int, int, int, float) [6] genetic::stringify[abi:cxx11](genetic::program const&)
+ [105] stbi__malloc_mad3(int, int, int, int) (stb_image.h) [7] genetic::set_batched_fitness(int, std::vector<genetic::program, std::allocator<genetic::program> >&, genetic::param const&, int, float const*, float const*, float const*) [96] genetic::node::is_terminal() const
+ [100] stbi__create_png_alpha_expand8(unsigned char*, unsigned char*, unsigned int, int) (stb_image.h) [92] genetic::node::node(genetic::node::type) [87] genetic::node::is_nonterminal() const
+  [21] utils::load_dataset(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [88] genetic::node::node(genetic::node const&) [90] genetic::node::arity() const
+ [106] std::pair<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >, std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > > utils::train_test_split<std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > >(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&, float) [97] genetic::node::node(float) [93] std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long)
+ [107] std::pair<std::vector<float, std::allocator<float> >, std::vector<float, std::allocator<float> > > utils::train_test_split<std::vector<float, std::allocator<float> > >(std::vector<float, std::allocator<float> > const&, float) [94] genetic::node::node(int) [24] void std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >::_M_realloc_append<std::vector<genetic::program, std::allocator<genetic::program> > const&>(std::vector<genetic::program, std::allocator<genetic::program> > const&)
+ [103] utils::flatten_column_major(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&) [15] genetic::node::node() [98] void std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >::_M_realloc_append<std::vector<float, std::allocator<float> > const&>(std::vector<float, std::allocator<float> > const&)
+   [5] genetic::cpp_evolve(std::vector<genetic::program, std::allocator<genetic::program> > const&, std::vector<genetic::program, std::allocator<genetic::program> >&, int, float const*, float const*, float const*, genetic::param const&, int, int) [14] genetic::node::operator=(genetic::node const&) [99] void std::vector<float, std::allocator<float> >::_M_realloc_append<float const&>(float const&)
+  [11] genetic::get_subtree(genetic::node*, int, PhiloxEngine&) [108] genetic::param::param() [20] void std::vector<float, std::allocator<float> >::_M_realloc_append<float>(float&&)
+  [18] genetic::build_program(genetic::program&, genetic::param const&, PhiloxEngine&) [4] genetic::symFit(float const*, float const*, float const*, int, int, genetic::param&, genetic::program*&, std::vector<std::vector<genetic::program, std::allocator<genetic::program> >, std::allocator<std::vector<genetic::program, std::allocator<genetic::program> > > >&) [109] void std::_Rb_tree<int, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > >, std::_Select1st<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > >, std::less<int>, std::allocator<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > > >::_M_assign_unique<std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*>(std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*, std::pair<int const, std::vector<genetic::node::type, std::allocator<genetic::node::type> > > const*)
+ [104] genetic::symRegPredict(float const*, int, genetic::program* const&, float*) [89] genetic::execute(genetic::program* const&, int, int, float const*, float*) [110] bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+ [101] genetic::compute_metric(int, int, float const*, float const*, float const*, float*, genetic::param const&) [22] genetic::program::program(genetic::program const&) [8] _init
+   [3] void genetic::execute_kernel<20>(genetic::program*, float const*, float*, unsigned long, unsigned long) [95] genetic::program::program() [13] philox_random_uint32
+  [25] genetic::hoist_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [91] genetic::program::~program() [26] philox_seed
+  [23] genetic::point_mutation(genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&) [10] genetic::program::operator=(genetic::program const&)
+ [102] void genetic::meanSquareError<float>(unsigned long, unsigned long, float const*, float const*, float const*, float*) [9] genetic::crossover(genetic::program const&, genetic::program const&, genetic::program&, genetic::param const&, PhiloxEngine&)
